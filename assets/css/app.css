@@ -139,3 +139,13 @@ main .hand-options img:hover {
     transform: translateY(0px);
   }
 }
+
+@media(max-width: 450px) {
+  main {
+    flex-direction: flex-col;
+  }
+
+  main section {
+    width: 100%;
+  }
+}
