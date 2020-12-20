@@ -26,33 +26,41 @@ const game = () => {
   const  compareHands = (player, computer) => {
     let winner = 'player'
 
-    switch(player) {
-      case 'rock':
-        if(computer !== 'batman' && computer !== 'scissors' && computer !== 'lizard')
-          winner = 'computer'
-      case 'paper':
-        if(computer !== 'rock' && computer !== 'ozzy' && computer !== 'spock')
-          winner = 'computer'
-      case 'scissors':
-        if(computer !== 'paper' && computer !== 'ozzy' && computer !== 'lizard')
-          winner = 'computer'
-      case 'batman':
-        if(computer !== 'scissors' && computer !== 'ozzy' && computer !== 'spock')
-          winner = 'computer'
-      case 'ozzy':
-        if(computer !== 'rock' && computer !== 'paper' && computer !== 'lizard')
-          winner = 'computer'
-      case 'lizard':
-        if(computer !== 'paper' && computer !== 'batman' && computer !== 'spock')
-          winner = 'computer'
-      case 'spock':
-        if(computer !== 'rock' && computer !== 'scissors' && computer !== 'ozzy')
-          winner = 'computer'
-      default:
-        if(player === computer)
-          winner = 'tie'
-        else
+    if(player === computer) {
+      winner = 'tie'
+    } else {
+      switch(player) {
+        case 'rock':
+          if(computer !== 'batman' && computer !== 'scissors' && computer !== 'lizard')
+            winner = 'computer'
+            break;
+        case 'paper':
+          if(computer !== 'rock' && computer !== 'ozzy' && computer !== 'spock')
+            winner = 'computer'
+            break;
+        case 'scissors':
+          if(computer !== 'paper' && computer !== 'ozzy' && computer !== 'lizard')
+            winner = 'computer'
+            break;
+        case 'batman':
+          if(computer !== 'scissors' && computer !== 'ozzy' && computer !== 'spock')
+            winner = 'computer'
+            break;
+        case 'ozzy':
+          if(computer !== 'rock' && computer !== 'paper' && computer !== 'lizard')
+            winner = 'computer'
+            break;
+        case 'lizard':
+          if(computer !== 'paper' && computer !== 'batman' && computer !== 'spock')
+            winner = 'computer'
+            break;
+        case 'spock':
+          if(computer !== 'rock' && computer !== 'scissors' && computer !== 'ozzy')
+            winner = 'computer'
+            break;
+        default:
           winner = 'player'
+      }
     }
 
 
