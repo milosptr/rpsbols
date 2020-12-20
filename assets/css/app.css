@@ -142,10 +142,28 @@ main .hand-options img:hover {
 
 @media(max-width: 450px) {
   main {
-    flex-direction: flex-col;
+    flex-direction: column;
   }
 
-  main section {
+  main section,
+  main section#rules {
     width: 100%;
+    padding: 25px 0;
+  }
+
+  main .hand-options {
+    padding: 0;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  main .result-title {
+    font-size: 32px;
+  }
+
+  main .hand-options img {
+    width: 60px;
+    height: 60px;
+    padding: 10px 15px;
   }
 }
